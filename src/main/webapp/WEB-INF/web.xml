@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <!-- push servlet -->
+  <servlet>
+    <servlet-name>main</servlet-name>
+
+    <servlet-class>app.servlets.MainServlet</servlet-class>
+    <multipart-config>
+      <location>\</location>
+      <max-file-size>20848820</max-file-size>
+      <max-request-size>418018841</max-request-size>
+      <file-size-threshold>1048576</file-size-threshold>
+    </multipart-config>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>main</servlet-name>
+    <url-pattern>/main</url-pattern>
+  </servlet-mapping>
+
+</web-app>

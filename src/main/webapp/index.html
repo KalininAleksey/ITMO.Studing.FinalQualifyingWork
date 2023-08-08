@@ -1,0 +1,210 @@
+<!--<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <title>Рамки ГОСТ</title>
+    <link rel="stylesheet" href="CSS/style.css"/>
+</head>
+<body>
+<header>
+    <video autoplay loop muted id="bgvideo">
+        <source src="videoplayback.mp4" type="video/mp4"></source>
+    </video>
+    <div>
+        <h1 class="main-title">
+            <a href="index.html">Рамки </br> ГОСТ</a>
+        </h1>
+        <ul class="menu-main">
+            <li>
+                <a href="#" class="item-main current">Главная</a></li>
+            <li><a class="item-formats" href="#">Форматы</a></li>
+            <li><a class="item-sizes" href="#">Размеры основных надписей</a></li>
+            <li><a class="item-gendoc" href="#">Формирование документа</a></li>
+        </ul>
+    </div>
+</header>
+<main>
+    <section class="item-main current">
+        <h2>Рамка чертежа ГОСТ</h2>
+        <article>
+            <p>Листы конструкторских документов должны быть очерчены рамкой, содержащей основную надпись.</p>
+            <center><img class="img-article" src="./CSS/img/Boarders.jpg" width=40%></center>
+            <p>Основной госодарственный стандарт, который устанавливает формы, размеры, номенклатуру реквизитов и
+                порядок
+                заполнения основной надписи и дополнительных граф к ней в конструкторских документах,
+                предусмотренных стандартами Единой системы конструкторской документации, является ГОСТ 2.104-2006.</p>
+        </article>
+    </section>
+    <section class="item-main current">
+        <h2>Назначение приложения</h2>
+        <article>
+            <p>Настоящее приложение позволяет дополнить документ, загруженный в формате docx, основной
+                надписью, рамками, дополнительными графами, реквизитами и атрибутами по ГОСТ 2.104-2006.</p>
+        </article>
+    </section>
+    <section class="item-formats">
+        <h2>Форматы</h2>
+        <article>
+            <p>Форматы, которые используются при оформлении чертежей можно найти в ГОСТ 2.301-68.
+                Самыми распространенными являются форматы А4, А3 и А1, но также могут использоваться форматы А0, А2 и
+                А5.
+                Их размеры приведены в таблице.</p>
+        </article>
+        <table>
+            <tbody>
+            <tr>
+                <td>Формат</td>
+                <td>Размер, мм</td>
+                <td>Размер, см</td>
+            </tr>
+            <tr>
+                <td>А0</td>
+                <td>841х1189</td>
+                <td>84,1х118,9</td>
+            </tr>
+            <tr>
+                <td>А1</td>
+                <td>594х841</td>
+                <td>59,4х84,1</td>
+            </tr>
+            <tr>
+                <td>А2</td>
+                <td>420х594</td>
+                <td>42х59,4</td>
+            </tr>
+            <tr>
+                <td>А3</td>
+                <td>297х420</td>
+                <td>29,7х42</td>
+            </tr>
+            <tr>
+                <td>А4</td>
+                <td>210х297</td>
+                <td>21х29,7</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="item-sizes">
+        <h2>Размеры основных надписей</h2>
+        <p>
+        <article class="item-sizes-article">
+            <p>Основная надпись и дополнительные графы для чертежей и схем (первый или заглавный лист)</p>
+            <img class="img-size-item" src="./CSS/img/Cx1.png">
+        </article>
+        <article class="item-sizes-article">
+            <p>Основная надпись и дополнительные графы для текстовых конструкторских документов (первый или заглавный
+                лист)</p>
+            <img class="img-size-item" src="./CSS/img/Cx2.png">
+        </article>
+        <article class="item-sizes-article">
+            <p>Основная надпись и дополнительные графы для чертежей, схем и текстовых конструкторских
+                документов(Последующие листы)</p>
+            <img class="img-size-item" src="./CSS/img/Cх3.png">
+        </article>
+        </p>
+    </section>
+    <section class="item-gendoc">
+        <h2>Заполняем данные для формирования документа с рамками</h2>
+        <article>
+            <form enctype="multipart/form-data" method="post" action="main">
+                <p>
+                <div class="form-item">
+                    <p>Укажите исходный файл формата docx</p>
+                </div>
+                <div class="form-item">
+                    <p><input class="btn" id="fileuploader" type="file" name="documentFile"
+                              accept="application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
+                    </p>
+                </div>
+                </p>
+                <p>
+                <div class="form-item">
+                    <p>Укажите фамилию для заполнения поля "Разраб." в документе</p>
+                </div>
+                <div class="form-item">
+                    <p><input type="text" name="developer" placeholder="Фамилия"></p>
+                </div>
+                </p>
+                <p>
+                <div class="form-item">
+                    <p>Укажите фамилию для заполнения поля "Пров." в документе</p>
+                </div>
+                <div class="form-item">
+                    <p><input type="text" name="checker" placeholder="Фамилия"></p>
+                </div>
+                </p>
+                <p>
+                <div class="form-item">
+                    <p>Укажите фамилию для заполнения поля "Утв." в документе</p>
+                </div>
+                <div class="form-item">
+                    <p><input type="text" name="approver" placeholder="Фамилия"></p>
+                </div>
+                </p>
+                <p>
+                <div class="form-item">
+                    <p>Укажите наименование изделия</p>
+                </div>
+                <div class="form-item">
+                    <p><input type="text" name="productName"></p>
+                </div>
+                </p>
+                <p>
+                <div class="form-item">
+                    <p>Укажите наименование документа</p>
+                </div>
+                <div class="form-item">
+                    <p><input type="text" name="documentName"></p>
+                </div>
+                </p>
+                <p>
+                <div class="form-item">
+                    <p>Укажите код документа</p>
+                </div>
+                <div class="form-item">
+                    <p><input type="text" name="documentCode"></p>
+                </div>
+                </p>
+                <p>
+                <div class="form-item">
+                    <p>Выберите тип документа</p>
+                </div>
+                <div class="form-item">
+                    <p>
+                        <input type="radio" id="docTypeChoice1"
+                               name="documentType" value="Текстовый конструкторский документ" checked>
+                        <label for="docTypeChoice1">Текстовый конструкторский документ</label>
+
+                        <input type="radio" id="docTypeChoice2"
+                               name="documentType" value="Схема">
+                        <label for="docTypeChoice2">Схема или чертеж</label>
+                    </p>
+                </div>
+                </p>
+                <p>
+                    <div class="form-item">
+                    <button id="sendformbtn" class="btn" type="submit" disabled>Отправить данные и <br>скачать
+                        сформированный документ
+                    </button>
+                    </div>
+                    <div class="form-item">
+                        <button class="btn" type ="reset"> Очистить введенные <br> данные </button>
+                    </div>
+                </p>
+            </form>
+        </article>
+    </section>
+</main>
+<br/>
+<footer>
+    <center>&copy;2023<br/>
+    </center>
+</footer>
+<script src="./js/jQuery.js"></script>
+<script charset="utf-8" src="./js/main.js"></script>
+</body>
+</html>
+

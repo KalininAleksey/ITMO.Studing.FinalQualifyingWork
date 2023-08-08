@@ -1,0 +1,211 @@
+@font-face {
+    font-family: 'GOST';
+    font-style: normal;
+    font-weight: normal; 
+    src: url('GOST.ttf') format('truetype');
+  }
+@font-face {
+    font-family: 'GOST_italic';
+    font-style: italic;
+    font-weight: normal;
+    src: url('GOST_italic.ttf') format('truetype');
+  }
+  body {
+    font-family:'GOST_italic', sans-serif;
+    font-weight: normal;
+    margin:0px
+  }
+ main {
+  margin: auto;
+  height: auto;
+ }
+  header {
+    border-bottom: 2px solid #000;
+    display: block;
+  }
+ .main-title {
+  font-family: 'GOST_italic', sans-serif;
+  font-weight: normal;
+  font-size: 2em;
+  line-height: 1.2em;
+  background-image: url(img/header1.jpg);
+  background-size: cover;
+  background-position: initial;
+  opacity: 0.6;
+  display: inline-block;
+  margin: 3%;
+  vertical-align: middle;
+  padding: 5px 21px 5px;
+ }
+ h1 a{
+  text-decoration: none;
+  color: #6e6e6e;
+ }
+  .menu-main {
+    list-style: none;
+    margin: 5px 0 5px;
+    padding: 25px 0 5px;
+    text-align: center;
+    background: white;
+    opacity: 0.6;
+    display: inline-block;
+    width: 70%;
+    vertical-align: middle;
+  }
+  .menu-main li {display: inline-block;}
+  .menu-main li:after {
+    content: "|";
+    color: #606060;
+    display: inline-block;
+    vertical-align:top;
+  }
+  .menu-main li:last-child:after {content: none;}
+  .menu-main a {
+    text-decoration: none;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 5px;
+    margin: 0 34px 0 30px;
+    font-size: 1em;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: color .2s;
+  }
+  .menu-main a, .menu-main a:visited {color: #6e6e6e;} 
+  .menu-main a.current, .menu-main a:hover{color: #7aacee;}
+  .menu-main a:before,
+  .menu-main a:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    top: auto;
+    right: 50%;
+    bottom: 0px;
+    left: 50%;
+    background: #3b3b3b;
+    transition: .5s;
+  }
+  .menu-main a:hover:before, .menu-main .current:before {left: 0;}
+  .menu-main a:hover:after, .menu-main .current:after {right: 0;}   
+   @media (max-width: 550px) {
+  .menu-main {padding-top: 0;}
+  .menu-main li {display: block;}
+  .menu-main li:after {content: none;}
+  .menu-main a {
+    padding: 25px 0 20px; 
+    margin: 0 30px;
+  }
+  }
+  .submenu{
+    display: none;
+  }
+
+  .active {
+    display:block;
+  }
+  
+  #bgvideo {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -9999;
+  }
+
+ main{
+  margin: 5px 10px;
+ }
+
+ main section article{
+       margin-top:20;
+       margin-bottom:2px;
+ }
+
+  main article p {
+    text-indent: 40px;
+    font-size: 1.2em;
+    text-align: justify;
+  } 
+  h2{
+    font-size:1.7em;
+    font-weight: 700;
+    text-align: center;
+  }
+  .img-article{
+    opacity: 0.6;
+  }
+  table{
+    margin: auto;
+    border-collapse: collapse;
+    text-align: center;
+    border-style: solid;
+    width: 80%;
+    height: 300px;
+    text-indent: initial;
+    border-width: 2px;
+    border-color: rgb(1, 1, 1);
+}
+table tr td {
+  padding: 10px;
+  border: 1px solid rgb(1, 1, 1);
+}
+table tr:nth-child(1) {
+  background: #edf3ff !important;
+  font-weight: bold;
+  text-align: center;
+}
+    tbody {
+      display: table-row-group;
+      vertical-align: middle;
+      border-color: inherit;
+  } 
+  section {
+    display:none;
+  }
+  .current {
+    display: block;
+  }
+  input:invalid {border-color: red;}
+  input:valid {border-color: green;}
+  #group{
+    margin: 2%;
+    display: block;
+  }
+  footer{
+    display: block;
+    margin-top: 20px;
+  }
+  .item-sizes {
+    width:auto;
+    margin:auto;
+    margin-top: 20px;
+    text-align:center;
+  }
+
+  .item-sizes-article {
+    vertical-align: top;
+    max-width: 30%;
+    min-width: 410px;
+    display: inline-block;
+    padding: 5px;
+    margin: auto;
+    height:auto;
+  }
+
+  .img-size-item {
+    width:400px;
+  }
+  .btn {
+    font-weight: normal;
+    border-radius: 5px;
+    margin-left: 40px;
+  }
+  #fileuploader {
+  width: 80%;
+  }
+  .form-item{
+  display: inline-block;
+  }
